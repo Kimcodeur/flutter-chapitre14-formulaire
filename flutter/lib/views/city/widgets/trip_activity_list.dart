@@ -26,7 +26,7 @@ class TripActivityList extends StatelessWidget {
                   color: Colors.red,
                 ),
                 onPressed: () {
-                  deleteTripActivity(activity.id);
+                  deleteTripActivity(activity);
                   Scaffold.of(context).showSnackBar(
                     const SnackBar(
                       content: const Text('Activité supprimée'),

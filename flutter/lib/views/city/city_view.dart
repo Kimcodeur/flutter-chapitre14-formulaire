@@ -45,7 +45,7 @@ class _CityState extends State<CityView> {
       context: context,
       initialDate: DateTime.now().add(Duration(days: 1)),
       firstDate: DateTime.now(),
-      lastDate: DateTime(2020),
+      lastDate: DateTime(2022),
     ).then((newDate) {
       if (newDate != null) {
         setState(() {
@@ -131,7 +131,7 @@ class _CityState extends State<CityView> {
       );
     } else if (result == 'save') {
       mytrip.city = cityName;
-      Provider.of<TripProvider>(context).addTrip(mytrip);
+      Provider.of<TripProvider>(context, listen: false).addTrip(mytrip);
       Navigator.pushNamed(context, HomeView.routeName);
     }
   }
